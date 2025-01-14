@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+
+    android:layout_gravity="center"
+    android:background="@color/black"
+    tools:context=".UserDetailsActivity">
+
+
+    <TextView
+
+        android:id="@+id/textViewFirstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingTop="100dp"
+        android:textSize="20dp"
+        android:layout_margin="5dp"
+        android:text="First Name"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewLastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Last Name"
+        android:textSize="20dp"
+        android:layout_margin="5dp"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Phone"
+        android:textSize="20dp"
+        android:layout_margin="5dp"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Email"
+        android:textSize="20dp"
+        android:layout_margin="5dp"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewCPF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="CPF"
+        android:textSize="20dp"
+        android:layout_margin="5dp"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewCEP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="CEP"
+        android:textSize="20dp"
+        android:layout_margin="5dp"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="City"
+        android:textSize="20dp"
+        android:layout_margin="5dp"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+
+
+    <TextView
+        android:id="@+id/textViewStreet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Street"
+        android:textSize="20dp"
+        android:layout_margin="5dp"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewApartament"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="20dp"
+        android:layout_margin="5dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:text="Apartament"
+        />
+
+    <TextView
+        android:id="@+id/textViewBirthDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Birth Date"
+        android:textSize="20dp"
+        android:layout_margin="5dp"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/textViewState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="State"
+        android:textSize="20dp"
+        android:layout_margin="5dp"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_red_dark"
+
+        android:visibility="gone" />
+
+</LinearLayout>

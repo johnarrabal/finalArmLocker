@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "421770257051",
+    "firebase_url": "https://armlocker-787e0-default-rtdb.firebaseio.com",
+    "project_id": "armlocker-787e0",
+    "storage_bucket": "armlocker-787e0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:421770257051:android:d451cf8af36bd2b441dc3e",
+        "android_client_info": {
+          "package_name": "com.example.finalarmlocker"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVNWijQ0h9-O8k4nE07JqZaGoXe8vFeRc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:421770257051:android:bbee393769e9ddc041dc3e",
+        "android_client_info": {
+          "package_name": "com.example.projetoarmario"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVNWijQ0h9-O8k4nE07JqZaGoXe8vFeRc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

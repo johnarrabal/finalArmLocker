@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="editTextApartament" type="id" />
+    <item name="editTextStreet" type="id" />
+    <item name="buttonRegister" type="id" />
+    <item name="editTextState" type="id" />
+    <item name="editTextCity" type="id" />
+    <item name="editTextLastName" type="id" />
+    <item name="editTextPhone" type="id" />
+    <item name="editTextCEP" type="id" />
+    <item name="editTextBirthDate" type="id" />
+    <item name="editTextFirstName" type="id" />
+</resources>

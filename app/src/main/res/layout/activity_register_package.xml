@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/black"
+    android:padding="16dp"
+    tools:context=".RegisterPackage">
+
+
+
+    <EditText
+        android:id="@+id/editTextApartmentNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Apartment Number"
+        android:textColorHint="@color/white"
+        android:inputType="text" />
+
+    <com.example.finalarmlocker.MaskedEditText
+        android:id="@+id/editTextCPF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="CPF"
+        android:inputType="text"
+        android:textColorHint="@color/white"
+        app:mask="###.###.###-##"/>
+
+    <Spinner
+        android:id="@+id/spinnerLockers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="16dp"
+        android:background="#80020202"
+        android:backgroundTint="@color/white"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/buttonRegisterPackage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:text="Registrar pacote"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/buttonCloseLocker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:text="Fechar Armário"
+        android:textColor="@color/black" />
+
+</LinearLayout>
