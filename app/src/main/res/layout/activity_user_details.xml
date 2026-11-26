@@ -1,149 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
+    tools:context=".ui.UserDetailsActivity">
 
-    android:layout_gravity="center"
-    android:background="@color/black"
-    tools:context=".UserDetailsActivity">
-
-
-    <TextView
-
-        android:id="@+id/textViewFirstName"
+    <ProgressBar
+        android:id="@+id/progressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:paddingTop="100dp"
-        android:textSize="20dp"
-        android:layout_margin="5dp"
-        android:text="First Name"
-        android:textColor="@color/white"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/textViewLastName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Last Name"
-        android:textSize="20dp"
-        android:layout_margin="5dp"
-        android:textColor="@color/white"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/textViewPhone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Phone"
-        android:textSize="20dp"
-        android:layout_margin="5dp"
-        android:textColor="@color/white"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/textViewEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Email"
-        android:textSize="20dp"
-        android:layout_margin="5dp"
-        android:textColor="@color/white"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/textViewCPF"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="CPF"
-        android:textSize="20dp"
-        android:layout_margin="5dp"
-        android:textColor="@color/white"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/textViewCEP"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="CEP"
-        android:textSize="20dp"
-        android:layout_margin="5dp"
-        android:textColor="@color/white"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/textViewCity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="City"
-        android:textSize="20dp"
-        android:layout_margin="5dp"
-        android:textColor="@color/white"
-        android:textStyle="bold" />
-
-
-
-    <TextView
-        android:id="@+id/textViewStreet"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Street"
-        android:textSize="20dp"
-        android:layout_margin="5dp"
-        android:textColor="@color/white"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/textViewApartament"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textSize="20dp"
-        android:layout_margin="5dp"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        android:text="Apartament"
-        />
-
-    <TextView
-        android:id="@+id/textViewBirthDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Birth Date"
-        android:textSize="20dp"
-        android:layout_margin="5dp"
-        android:textColor="@color/white"
-        android:textStyle="bold" />
-
-
-    <TextView
-        android:id="@+id/textViewState"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="State"
-        android:textSize="20dp"
-        android:layout_margin="5dp"
-        android:textColor="@color/white"
-        android:textStyle="bold" />
+        android:layout_gravity="center" />
 
     <TextView
         android:id="@+id/textViewError"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/holo_red_dark"
-
+        android:layout_gravity="center"
+        android:padding="24dp"
+        android:textColor="@color/danger"
         android:visibility="gone" />
 
-</LinearLayout>
+    <ScrollView
+        android:id="@+id/contentGroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                style="@style/ArmLocker.ScreenTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/details_title" />
+
+            <ImageView
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/bg_avatar"
+                android:importantForAccessibility="no"
+                android:padding="20dp"
+                android:src="@drawable/ic_person" />
+
+            <TextView
+                android:id="@+id/textViewFullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                tools:text="Maria Silva" />
+
+            <TextView
+                android:id="@+id/textViewEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/text_secondary"
+                tools:text="maria@exemplo.com" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="24dp"
+                android:background="@color/outline" />
+
+            <TextView
+                android:id="@+id/textViewPhone"
+                style="@style/ArmLocker.DetailRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textViewCPF"
+                style="@style/ArmLocker.DetailRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textViewBirthDate"
+                style="@style/ArmLocker.DetailRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textViewAddress"
+                style="@style/ArmLocker.DetailRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textViewCity"
+                style="@style/ArmLocker.DetailRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textViewCEP"
+                style="@style/ArmLocker.DetailRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

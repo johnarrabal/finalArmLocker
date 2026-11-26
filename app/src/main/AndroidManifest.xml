@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Firebase, API ViaCEP e broker MQTT -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Preencher o endereço no cadastro e registrar onde a encomenda foi entregue -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-feature android:name="android.hardware.camera" android:required="false" />
-    <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
+        android:name=".ArmLockerApp"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -16,22 +19,28 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FinalArmLocker"
         tools:targetApi="31">
+
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".UserLogActivity" />
-        <activity android:name=".UserDetailsActivity" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".RegisterPackage" />
-        <activity android:name=".TakePackage" />
+        <activity
+            android:name=".ui.LoginActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.RegisterActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ui.UserLogActivity" />
+        <activity android:name=".ui.UserDetailsActivity" />
+        <activity android:name=".ui.TakePackageActivity" />
+        <activity
+            android:name=".ui.RegisterPackageActivity"
+            android:windowSoftInputMode="adjustResize" />
 
     </application>
 

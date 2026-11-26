@@ -1,4 +1,105 @@
-<resources>
-    <string name="app_name">FinalArmLocker</string>
-    <string name="welcome_message">Welcome, %1$s!</string>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:locale="pt">
+    <string name="app_name">ArmLocker</string>
+
+    <!-- Geral -->
+    <string name="loading">Aguarde…</string>
+    <string name="action_cancel">Cancelar</string>
+    <string name="error_generic">Algo deu errado. Verifique sua conexão e tente de novo.</string>
+    <string name="error_required">Campo obrigatório</string>
+    <string name="error_session">Sessão inválida. Entre novamente.</string>
+
+    <!-- Tela inicial -->
+    <string name="main_subtitle">Armário inteligente de encomendas</string>
+    <string name="action_login">Entrar</string>
+    <string name="action_sign_up">Criar conta</string>
+    <string name="main_delivery_hint">É entregador?</string>
+    <string name="action_register_package">Registrar encomenda</string>
+    <string name="content_description_logo">Logo do ArmLocker</string>
+
+    <!-- Campos -->
+    <string name="hint_first_name">Nome</string>
+    <string name="hint_last_name">Sobrenome</string>
+    <string name="hint_email">E-mail</string>
+    <string name="hint_password">Senha</string>
+    <string name="hint_birth_date">Data de nascimento</string>
+    <string name="hint_cpf">CPF</string>
+    <string name="hint_phone">Telefone</string>
+    <string name="hint_cep">CEP</string>
+    <string name="hint_state">Estado</string>
+    <string name="hint_city">Cidade</string>
+    <string name="hint_street">Rua</string>
+    <string name="hint_apartment">Apartamento / complemento</string>
+    <string name="helper_apartment">O entregador vai usar este valor para registrar suas encomendas.</string>
+
+    <!-- Validação -->
+    <string name="error_invalid_email">E-mail inválido</string>
+    <string name="error_invalid_password">Use pelo menos 6 caracteres</string>
+    <string name="error_invalid_cpf">CPF inválido</string>
+    <string name="error_invalid_date">Data inválida (dd/mm/aaaa)</string>
+    <string name="error_invalid_cep">CEP inválido</string>
+    <string name="error_invalid_phone">Telefone inválido</string>
+
+    <!-- Login -->
+    <string name="login_title">Entrar</string>
+    <string name="login_invalid">E-mail ou senha incorretos</string>
+
+    <!-- Cadastro -->
+    <string name="register_title">Criar conta</string>
+    <string name="register_section_personal">Dados pessoais</string>
+    <string name="register_section_address">Endereço</string>
+    <string name="action_create_account">Cadastrar</string>
+    <string name="register_success">Cadastro concluído! Agora é só entrar.</string>
+    <string name="error_email_in_use">Este e-mail já está cadastrado</string>
+    <string name="error_cpf_in_use">Este CPF já está cadastrado</string>
+    <string name="error_cep_not_found">CEP não encontrado</string>
+    <string name="cep_lookup_failed">Não foi possível consultar o CEP. Preencha o endereço manualmente.</string>
+
+    <!-- Área do morador -->
+    <string name="welcome_message">Olá, %1$s!</string>
+    <string name="home_photo_hint">Toque na foto para ver seus dados</string>
+    <string name="content_description_user_photo">Ver meus dados</string>
+    <string name="action_my_packages">Retirar encomenda</string>
+    <string name="action_logout">Sair</string>
+    <string name="logout_done">Você saiu da sua conta.</string>
+
+    <!-- Meus dados -->
+    <string name="details_title">Meus dados</string>
+    <string name="detail_phone">Telefone: %1$s</string>
+    <string name="detail_cpf">CPF: %1$s</string>
+    <string name="detail_birth_date">Nascimento: %1$s</string>
+    <string name="detail_address">Endereço: %1$s, %2$s</string>
+    <string name="detail_city">Cidade: %1$s / %2$s</string>
+    <string name="detail_cep">CEP: %1$s</string>
+    <string name="error_load_user">Não foi possível carregar seus dados.</string>
+
+    <!-- Minhas encomendas -->
+    <string name="packages_title">Minhas encomendas</string>
+    <string name="packages_empty">Nenhuma encomenda esperando por você.</string>
+    <string name="package_apartment">Apartamento %1$s</string>
+    <string name="locker_unknown">Armário</string>
+    <string name="action_withdraw">Retirar</string>
+    <string name="withdraw_confirm_title">Retirar encomenda?</string>
+    <string name="withdraw_confirm_message">O %1$s será aberto. Confirme só quando estiver em frente ao armário.</string>
+    <string name="withdraw_success">%1$s aberto. Retire sua encomenda.</string>
+    <string name="withdraw_mqtt_error">Não foi possível falar com o armário. Tente de novo.</string>
+    <string name="withdraw_delete_error">O armário abriu, mas a encomenda não saiu da lista. Puxe a lista para atualizar.</string>
+
+    <!-- Registrar encomenda (entregador) -->
+    <string name="register_package_title">Registrar encomenda</string>
+    <string name="hint_package_apartment">Apartamento do morador</string>
+    <string name="hint_package_cpf">CPF do morador</string>
+    <string name="label_locker">Armário</string>
+    <string name="lockers_loading">Carregando armários…</string>
+    <string name="lockers_load_error">Não foi possível carregar os armários. Toque para tentar de novo.</string>
+    <string name="no_free_lockers">Todos os armários estão ocupados.</string>
+    <string name="action_close_locker">Fechar armário</string>
+    <string name="package_success">Encomenda registrada no %1$s.</string>
+    <string name="package_success_mqtt_error">Encomenda registrada no %1$s, mas o armário não recebeu o aviso.</string>
+    <string name="error_select_locker">Escolha um armário.</string>
+    <string name="error_locker_in_use">Esse armário acabou de ser ocupado. Escolha outro.</string>
+    <string name="error_user_not_found">Nenhum morador cadastrado com esse CPF</string>
+    <string name="error_apartment_mismatch">O apartamento não confere com o cadastro do morador</string>
+    <string name="close_need_cpf">Informe o CPF do morador</string>
+    <string name="close_sent">Comando de fechar enviado ao armário.</string>
+    <string name="close_error">Não foi possível falar com o armário.</string>
 </resources>

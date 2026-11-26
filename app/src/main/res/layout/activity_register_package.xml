@@ -1,61 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:background="@color/black"
-    android:padding="16dp"
-    tools:context=".RegisterPackage">
+    android:fillViewport="true"
+    tools:context=".ui.RegisterPackageActivity">
 
-
-
-    <EditText
-        android:id="@+id/editTextApartmentNumber"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Apartment Number"
-        android:textColorHint="@color/white"
-        android:inputType="text" />
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="24dp">
 
-    <com.example.finalarmlocker.MaskedEditText
-        android:id="@+id/editTextCPF"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="CPF"
-        android:inputType="text"
-        android:textColorHint="@color/white"
-        app:mask="###.###.###-##"/>
+        <TextView
+            style="@style/ArmLocker.ScreenTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register_package_title" />
 
-    <Spinner
-        android:id="@+id/spinnerLockers"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="16dp"
-        android:background="#80020202"
-        android:backgroundTint="@color/white"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        tools:visibility="visible" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputLayoutApartment"
+            style="@style/ArmLocker.Field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_package_apartment">
 
-    <Button
-        android:id="@+id/buttonRegisterPackage"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/white"
-        android:text="Registrar pacote"
-        android:textColor="@color/black" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextApartmentNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
-        android:id="@+id/buttonCloseLocker"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/white"
-        android:text="Fechar Armário"
-        android:textColor="@color/black" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputLayoutCpf"
+            style="@style/ArmLocker.Field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_package_cpf">
 
-</LinearLayout>
+            <com.example.finalarmlocker.ui.MaskedEditText
+                android:id="@+id/editTextCPF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="0123456789.-"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                app:mask="###.###.###-##" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textLockerLabel"
+            style="@style/ArmLocker.SectionLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_locker" />
+
+        <Spinner
+            android:id="@+id/spinnerLockers"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="4dp"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/textLockerStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:minHeight="48dp"
+            android:gravity="center_vertical"
+            android:text="@string/lockers_loading"
+            android:textColor="@color/text_secondary" />
+
+        <Button
+            android:id="@+id/buttonRegisterPackage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:enabled="false"
+            android:text="@string/action_register_package" />
+
+        <Button
+            android:id="@+id/buttonCloseLocker"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/action_close_locker" />
+
+    </LinearLayout>
+</ScrollView>

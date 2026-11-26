@@ -1,80 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
-    tools:context=".UserLogActivity">
-
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="24dp"
+    tools:context=".ui.UserLogActivity">
 
     <TextView
         android:id="@+id/welcomeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="49dp"
-        android:text="Bem vindo, "
+        android:gravity="center"
         android:textColor="@color/white"
-        android:textSize="30dp"
-        android:visibility="visible"
-        app:autoSizeTextType="uniform"
-        app:layout_constraintBottom_toTopOf="@+id/userPhoto"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="visible" />
+        android:textSize="28sp"
+        android:textStyle="bold"
+        tools:text="Olá, Maria!" />
 
     <ImageView
         android:id="@+id/userPhoto"
-        android:layout_width="145dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="54dp"
-        android:paddingLeft="2dp"
-        android:src="@drawable/ic_launcher_foreground"
-        android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/buttonPackages"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/welcomeText" />
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/bg_avatar"
+        android:clickable="true"
+        android:contentDescription="@string/content_description_user_photo"
+        android:focusable="true"
+        android:padding="24dp"
+        android:src="@drawable/ic_person" />
 
     <TextView
-        android:id="@+id/textViewHistory"
+        android:id="@+id/textPhotoHint"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="352dp"
-        android:text="Histórico de encomendas"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/buttonPackages"
-        app:layout_constraintTop_toBottomOf="@+id/buttonPackages" />
-
-    <Button
-        android:id="@+id/buttonLogout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="35dp"
-        android:backgroundTint="#FB2A1B"
-        android:text="Sair"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonPackages" />
+        android:layout_marginTop="8dp"
+        android:text="@string/home_photo_hint"
+        android:textColor="@color/text_secondary" />
 
     <Button
         android:id="@+id/buttonPackages"
-        android:layout_width="194dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="283dp"
-        android:layout_marginBottom="298dp"
-        android:backgroundTint="@color/white"
-        android:text="Retirar encomenda"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/buttonLogout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="@string/action_my_packages" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/buttonLogout"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/action_logout"
+        android:textColor="@color/danger"
+        app:strokeColor="@color/danger" />
+
+</LinearLayout>
